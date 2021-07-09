@@ -183,13 +183,13 @@
                           <span class="nav-text"> Statistics</span>
                           <span class="nav-caret"><b class="caret"></b></span>
                         <ul class="nav-submenu">
-                          {acl_check page='statistics' action='pool' name='<i class="fa fa-align-left fa-fw"></i> Pool' acl=$GLOBAL.acl.pool.statistics fallback='page=statistics'}
-                          {acl_check page='statistics' action='blocks' name='<i class="fa fa-th-large fa-fw"></i> Blocks' acl=$GLOBAL.acl.block.statistics}
-                          {acl_check page='statistics' action='round' name='<i class="fa fa-refresh fa-fw"></i> Round' acl=$GLOBAL.acl.round.statistics}
-                          {acl_check page='statistics' action='blockfinder' name='<i class="fa fa-search fa-fw"></i> Blockfinder' acl=$GLOBAL.acl.blockfinder.statistics}
-                          {acl_check page='statistics' action='uptime' name='<i class="fa fa-clock-o fa-fw"></i> Uptime' acl=$GLOBAL.acl.uptime.statistics}
-                          {acl_check page='statistics' action='graphs' name='<i class="fa fa-signal fa-fw"></i> Graphs' acl=$GLOBAL.acl.graphs.statistics}
-                          {acl_check page='statistics' action='donors' name='<i class="fa fa-bitbucket fa-fw"></i> Donors' acl=$GLOBAL.acl.donors.page}
+                          {acl_check page='statistics' action='pool' name='<span class="nav-icon"><i class="fa fa-align-left fa-fw"></i></span><span class="nav-text"> Pool</span>' acl=$GLOBAL.acl.pool.statistics fallback='page=statistics'}
+                          {acl_check page='statistics' action='blocks' name='<span class="nav-icon"><i class="fa fa-th-large fa-fw"></i></span><span class="nav-text"> Blocks</span>' acl=$GLOBAL.acl.block.statistics}
+                          {acl_check page='statistics' action='round' name='<span class="nav-icon"><i class="fas fa-sync-alt fa-fw"></i></span><span class="nav-text"> Round</span>' acl=$GLOBAL.acl.round.statistics}
+                          {acl_check page='statistics' action='blockfinder' name='<span class="nav-icon"><i class="fa fa-search fa-fw"></i></span><span class="nav-text"> Blockfinder</span>' acl=$GLOBAL.acl.blockfinder.statistics}
+                          {acl_check page='statistics' action='uptime' name='<span class="nav-icon"><i class="fas fa-clock fa-fw"></i></span><span class="nav-text"> Uptime</span>' acl=$GLOBAL.acl.uptime.statistics}
+                          {acl_check page='statistics' action='graphs' name='<span class="nav-icon"><i class="fa fa-signal fa-fw"></i></span><span class="nav-text"> Graphs</span>' acl=$GLOBAL.acl.graphs.statistics}
+                          {acl_check page='statistics' action='donors' name='<span class="nav-icon"><i class="fab fa-bitbucket fa-fw"></i></span><span class="nav-text"> Donors</span>' acl=$GLOBAL.acl.donors.page}
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
@@ -205,16 +205,16 @@
                             <span class="nav-icon"><i class="fa fa-question fa-fw"></i></span>
                             <span class="nav-text"> Getting Started</span>
                           </a></li>
-                          {acl_check page='about' action='pool' name='<i class="fa fa-info fa-fw"></i> About' acl=$GLOBAL.acl.about.page}
-                          {acl_check page='about' action='chat' name='<i class="fa fa-comments-o fa-fw"></i> Web Chat' acl=$GLOBAL.acl.chat.page}
-                          {acl_check page='about' action='moot' name='<i class="fa fa-ticket fa-fw"></i> Forum' acl=$GLOBAL.acl.moot.forum}
+                          {acl_check page='about' action='pool' name='<span class="nav-icon"><i class="fa fa-info fa-fw"></i></span><span class="nav-text"> About</span>' acl=$GLOBAL.acl.about.page}
+                          {acl_check page='about' action='chat' name='<span class="nav-icon"><i class="fa fa-comments-o fa-fw"></i></span><span class="nav-text"> Web Chat</span>' acl=$GLOBAL.acl.chat.page}
+                          {acl_check page='about' action='moot' name='<span class="nav-icon"><i class="fa fa-ticket fa-fw"></i></span><span class="nav-text"> Forum</span>' acl=$GLOBAL.acl.moot.forum}
                         </ul>
                         <!-- /.nav-second-level -->
                     </li>
                     {/if}
 
                     <li >
-                        <a href="{$smarty.server.SCRIPT_NAME}?page=dashboard">
+                        <a href="{$smarty.server.SCRIPT_NAME}?page=logout">
                           <span class="nav-icon"><i class="fas fa-sign-out-alt fa-fw "></i></span>
                           <span class="nav-text">Logout</span>
                         </a>
