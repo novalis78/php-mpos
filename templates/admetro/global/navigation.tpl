@@ -9,7 +9,7 @@
 
             <div class="profile-img">
 
-              <img src="https://via.placeholder.com/60x60" />
+              <img src="{$GRAV_URL}" alt="" />
 
             </div>
 

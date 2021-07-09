@@ -46,6 +46,9 @@ if (isset($_SESSION['USERDATA']['timezone'])) {
   date_default_timezone_set('UTC');
 }
 
+
+
+
 // Our default template to load, pages can overwrite this later
 $master_template = 'master.tpl';
 

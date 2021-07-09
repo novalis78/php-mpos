@@ -1,3 +1,33 @@
+<!-- BEGIN #content -->
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        Dashboard <small>overview, analytics & report</small>
+      </h1>
+      <!-- END page-header -->
+
+      {nocache}
+    {if is_array($smarty.session.POPUP|default)}
+      {section popup $smarty.session.POPUP}
+      <div class="{if $smarty.session.POPUP[popup].DISMISS|default:"" == "yes"}alert-dismissable {/if} {$smarty.session.POPUP[popup].TYPE|default:"alert alert-info"} {if $smarty.session.POPUP[popup].ID|default:"static" == "static" AND $GLOBAL.website.notificationshide == 1}autohide{/if}" id="{$smarty.session.POPUP[popup].ID|default:"static"}">
+        {if $smarty.session.POPUP[popup].DISMISS|default:"no" == "yes"}
+        <button id="{$smarty.session.POPUP[popup].ID|default:"static"}" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        {/if}
+        {if $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-info"}
+        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-warning"}
+        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-danger"}
+        <span class="glyphicon glyphicon-remove-circle">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-success"}
+        <span class="glyphicon glyphicon-ok-circle">&nbsp;</span>
+        {/if}
+        {$smarty.session.POPUP[popup].CONTENT nofilter}
+      </div>
+      {/section}
+    {/if}
+    {/nocache}
+
 {if $smarty.session.AUTHENTICATED|default}
 <script src="{$PATH}/js/plugins/date.format.js"></script>
 <script src="{$PATH}/js/plugins/soundjs-0.6.0.min.js"></script>
@@ -37,3 +67,4 @@
 {/if}
 
 
+</div>

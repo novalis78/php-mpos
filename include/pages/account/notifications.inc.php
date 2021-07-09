@@ -50,6 +50,14 @@ if ($user->isAuthenticated()) {
     $aPushSettings = $pushnotification->getNotificationSettings($_SESSION['USERDATA']['id']);
     $aSmartyClasses = $pushnotification->getClassesForSmarty();
 
+
+$email = $_SESSION['USERDATA']['email'];
+$default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
+$size = 360;
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+$smarty->assign('GRAV_URL', $grav_url);
+
+
     $smarty->assign('NOTIFICATIONS', $aNotifications);
     $smarty->assign('PUSHNOTIFICATIONS', $aSmartyClasses);
     $smarty->assign('PUSHSETTINGS', $aPushSettings);

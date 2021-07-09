@@ -47,6 +47,13 @@ if ($user->isAuthenticated()) {
       break;
     }
 
+$email = $_SESSION['USERDATA']['email'];
+$default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
+$size = 360;
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+$smarty->assign('GRAV_URL', $grav_url);
+
+
     $smarty->assign('DISABLE_IDLEWORKERNOTIFICATIONS', $setting->getValue('notifications_disable_idle_worker'));
     $aWorkers = $worker->getWorkers($_SESSION['USERDATA']['id']);
     if (!$aWorkers) $_SESSION['POPUP'][] = array('CONTENT' => 'You have no workers configured', 'TYPE' => 'alert alert-danger');

@@ -198,6 +198,12 @@ if ($config['twofactor']['enabled'] && $user->isAuthenticated()) {
   $smarty->assign("DETAILSSENT", $ea_sent);
 }
 
+$email = $_SESSION['USERDATA']['email'];
+$default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
+$size = 360;
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+$smarty->assign('GRAV_URL', $grav_url);
+
 // Grab our timezones
 $smarty->assign('TIMEZONES', DateTimeZone::listIdentifiers());
 

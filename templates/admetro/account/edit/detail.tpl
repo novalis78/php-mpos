@@ -3,12 +3,12 @@
   <input type="hidden" name="action" value="{$smarty.request.action|escape}">
   <input type="hidden" name="do" value="updateAccount">
   <input type="hidden" name="ctoken" value="{$CTOKEN|escape|default:""}" />
-  <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+  <div class="col-lg-12">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-edit fa-fw"></i> Account Details
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <div class="row">
           <div class="col-lg-12">
             <div class="form-group">
@@ -69,7 +69,7 @@
           </div>
         </div>
       </div>
-      <div class="panel-footer">
+      <div class="card-footer">
       {nocache}
       <input type="hidden" name="ctoken" value="{$CTOKEN|escape|default:""}" />
       <input type="hidden" name="ea_token" value="{$smarty.request.ea_token|escape|default:""}">

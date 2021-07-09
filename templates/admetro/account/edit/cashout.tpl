@@ -3,12 +3,12 @@
   <input type="hidden" name="page" value="{$smarty.request.page|escape}">
   <input type="hidden" name="action" value="{$smarty.request.action|escape}">
   <input type="hidden" name="do" value="cashOut">
-  <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
-        <i class="fa fa-money fa-fw"></i> Cash Out
+  <div class="col-lg-12">
+    <div class="card panel-info">
+      <div class="card-header">
+        <i class="fa fa-dollar-sign fa-fw"></i> Cash Out
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <div class="row">
           <div class="col-lg-12">
             <div class="form-group">
@@ -34,7 +34,7 @@
           </div>
         </div>
       </div>
-      <div class="panel-footer">
+      <div class="card-footer">
       {nocache}
       <input type="hidden" name="wf_token" value="{$smarty.request.wf_token|escape|default:""}">
       <input type="hidden" name="ctoken" value="{$CTOKEN|escape|default:""}" />

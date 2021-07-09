@@ -1,3 +1,6 @@
+    <div id="content" class="app-content">
+
+
    <!-- BEGIN row -->
       <div class="row">
         <!-- BEGIN col-6 -->
@@ -6,12 +9,12 @@
           <div class="widget-card widget-card-inverse">
             <div class="widget-card-col col-12 col-lg-6">
               <!-- BEGIN widget-card-cover -->
-              <div class="widget-card-cover" style="background-image: url(https://via.placeholder.com/1000x1000)">
+              <div class="widget-card-cover" style="background-image: url(site_assets/admetro/img/mars-colony.jpg)">
                 <div class="cover-bg"></div>
               </div>
               <!-- END widget-card-cover -->
               <div class="widget-card-content widget-hero bottom">
-                <h1>Welcome back, Admin!</h1>
+                <h1>Welcome back, Miner!</h1>
                 <p class="m-b-0">I am glad to see you back online. Today is a great day!</p>
               </div>
             </div>
@@ -21,22 +24,22 @@
               <p class="widget-desc widget-desc-inverse m-b-25">We've assembled some links to get you started:</p>
               <!-- BEGIN widget-list -->
               <div class="widget-list widget-list-inverse  widget-list-full-width">
-                <a href="#" class="widget-list-item">
+                <a href="{$smarty.server.SCRIPT_NAME}?page=gettingstarted" class="widget-list-item">
                   <div class="widget-list-media">
                     <i class="fa fa-plus bg-gradient-blue text-white icon"></i>
                   </div>
                   <div class="widget-list-content">
-                    <h4>Create New Post</h4>
-                    <p>Wordpress</p>
+                    <h4>How to mine</h4>
+                    <p>A guide to this pool</p>
                   </div>
                 </a>
-                <a href="#" class="widget-list-item">
+                <a href="{$smarty.server.SCRIPT_NAME}?page=account&action=edit" class="widget-list-item">
                   <div class="widget-list-media">
                     <i class="fa fa-store-alt bg-gradient-indigo text-white icon"></i>
                   </div>
                   <div class="widget-list-content">
-                    <h4>Manage Store</h4>
-                    <p>Product</p>
+                    <h4>Manage Account</h4>
+                    <p>Edit</p>
                   </div>
                 </a>
                 <a href="#" class="widget-list-item">
@@ -44,35 +47,35 @@
                     <i class="fa fa-credit-card bg-gradient-green text-white icon"></i>
                   </div>
                   <div class="widget-list-content">
-                    <h4>Manage Transaction</h4>
-                    <p>Report</p>
+                    <h4>Manage Transactions</h4>
+                    <p>Your transactions</p>
                   </div>
                 </a>
-                <a href="#" class="widget-list-item">
+                <a href="{$smarty.server.SCRIPT_NAME}?page=account&action=workers" class="widget-list-item">
                   <div class="widget-list-media">
                     <i class="fa fa-qrcode bg-gradient-orange icon"></i>
                   </div>
                   <div class="widget-list-content">
-                    <h4>Manage API Key</h4>
-                    <p>Library</p>
+                    <h4>Manage Workers</h4>
+                    <p>Your mining workers</p>
                   </div>
                 </a>
-                <a href="#" class="widget-list-item">
+                <a href="{$smarty.server.SCRIPT_NAME}?page=account&action=notifications" class="widget-list-item">
                   <div class="widget-list-media">
                     <i class="fa fa-comments bg-gradient-red icon"></i>
                   </div>
                   <div class="widget-list-content">
-                    <h4>Manage Inbox</h4>
-                    <p>Email</p>
+                    <h4>Notifications</h4>
+                    <p>See what's up</p>
                   </div>
                 </a>
-                <a href="#" class="widget-list-item">
+                 <a href="{$smarty.server.SCRIPT_NAME}?page=statistics&action=pool" class="widget-list-item">
                   <div class="widget-list-media">
                     <i class="fa fa-cog icon"></i>
                   </div>
                   <div class="widget-list-content">
-                    <h4>Settings</h4>
-                    <p>System</p>
+                    <h4>Statistics</h4>
+                    <p>Pool statistics</p>
                   </div>
                 </a>
               </div>
@@ -88,82 +91,11 @@
           <div class="row">
             <!-- BEGIN col-6 -->
             <div class="col-xl-12 col-sm-6 col-12">
-              <!-- BEGIN widget-card -->
-              <div class="widget-card widget-card-inverse" style="height: 12.45rem;">
-                <!-- BEGIN widget-card-cover -->
-                <div class="widget-card-cover" style="background-image: url(https://via.placeholder.com/600x600)">
-                  <div class="cover-bg"></div>
-                </div>
-                <!-- END widget-card-cover -->
-                <!-- BEGIN widget-card-content -->
-                <div class="widget-card-content">
-                  <div class="dropdown dropdown-icon pull-right">
-                    <a href="#" class="text-white" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a href="#" class="dropdown-item">View</a>
-                      <a href="#" class="dropdown-item">Analytics</a>
-                      <a href="#" class="dropdown-item">Report</a>
-                    </div>
-                  </div>
-                  <h4 class="widget-title">POPULAR VIDEOS</h4>
-                </div>
-                <!-- END widget-card-content -->
-                <!-- BEGIN widget-card-content -->
-                <div class="widget-card-content bottom">
-                  <div class="widget-list widget-list-inverse widget-list-full-width">
-                    <a href="#" class="widget-list-item">
-                      <div class="widget-list-media"><i class="fa fa-play icon bg-gradient-blue"></i></div>
-                      <div class="widget-list-content">
-                        <h4>In the Heart of the Sea</h4>
-                        <p><i class="far fa-eye"></i> 1.2m views <i class="far fa-clock m-l-10"></i> 2h 2m</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- END widget-card-content -->
-              </div>
-              <!-- END widget-card -->
+              {literal}
+              <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+<coingecko-coin-price-chart-widget  coin-id="marscoin" currency="usd" height="400" locale="en"></coingecko-coin-price-chart-widget>
+              {/literal}
             </div>
-            <!-- END col-6 -->
-            <!-- BEGIN col-6 -->
-            <div class="col-xl-12 col-sm-6 col-12">
-              <!-- BEGIN widget-card -->
-              <div class="widget-card widget-card-inverse" style="height: 12.45rem;">
-                <!-- BEGIN widget-card-cover -->
-                <div class="widget-card-cover" style="background-image: url(https://via.placeholder.com/600x600)">
-                  <div class="cover-bg"></div>
-                </div>
-                <!-- END widget-card-cover -->
-                <!-- BEGIN widget-card-content -->
-                <div class="widget-card-content">
-                  <div class="dropdown dropdown-icon pull-right">
-                    <a href="#" class="text-white" data-toggle="dropdown"><i class="fa fa-ellipsis-h"></i></a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                      <a href="#" class="dropdown-item">View</a>
-                      <a href="#" class="dropdown-item">Analytics</a>
-                      <a href="#" class="dropdown-item">Report</a>
-                    </div>
-                  </div>
-                  <h4 class="widget-title">WEEKLY TRENDING MUSIC</h4>
-                </div>
-                <!-- END widget-card-content -->
-                <!-- BEGIN widget-card-content -->
-                <div class="widget-card-content bottom">
-                  <div class="widget-list widget-list-inverse widget-list-full-width">
-                    <a href="#" class="widget-list-item">
-                      <div class="widget-list-media"><i class="fa fa-headphones-alt icon bg-gradient-orange"></i></div>
-                      <div class="widget-list-content">
-                        <h4>Fireworks - Violing Cover</h4>
-                        <p><i class="far fa-eye"></i> 951.9m views <i class="far fa-clock m-l-10"></i> 3m 53s</p>
-                      </div>
-                    </a>
-                  </div>
-                </div>
-                <!-- END widget-card-content -->
-              </div>
-              <!-- END widget-card -->
-            </div>
-            <!-- END col-6 -->
           </div>
           <!-- END row -->
         </div>
@@ -304,59 +236,27 @@
             <!-- BEGIN card-header -->
             <div class="card-header card-header-inverse">
               <h4 class="card-header-title">
-                TOP AUTHORS
+                BUY SCRYPT MINING EQUIPMENT
               </h4>
-              <div class="card-header-btn">
-                <a href="#" data-toggle="card-expand" class="btn btn-success"><i class="fa fa-expand"></i></a>
-                <a href="#" data-toggle="card-refresh" class="btn btn-warning"><i class="fa fa-redo"></i></a>
-                <a href="#" data-toggle="card-remove" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
-              </div>
             </div>
             <!-- END card-header -->
             <!-- BEGIN widget-card -->
             <div class="widget-card widget-card-inverse full dynamic text-center">
-              <div class="widget-card-cover" style="background-image: url(https://via.placeholder.com/600x600)">
-                <div class="cover-bg"></div>
-              </div>
-              <div class="widget-card-content">
-                <div class="mb-2 mt-2"><img src="https://via.placeholder.com/300x300" width="85" class="img-circle" alt="" /></div>
-                <h4 class="widget-title">Maurice Patterson</h4>
-                <p class="widget-desc widget-desc-inverse">Never give up</p>
-                <hr class="hr-inverse-transparent" />
-                <div class="row m-b-2">
-                  <div class="col-4"><div class="widget-title f-s-16">415</div><div class="widget-desc widget-desc-inverse">posts</div></div>
-                  <div class="col-4"><div class="widget-title f-s-16">140k</div><div class="widget-desc widget-desc-inverse">followers</div></div>
-                  <div class="col-4"><div class="widget-title f-s-16">697</div><div class="widget-desc widget-desc-inverse">following</div></div>
-                </div>
-              </div>
+              <img style="height: 250px;" src="site_assets/admetro/img/scrypt_miner.jpg">
             </div>
             <!-- END widget-card -->
             <!-- BEGIN widget-list-->
             <div class="widget-list">
-              <a href="#" class="widget-list-item">
+              <a href="https://www.amazon.com/AntMiner-L3-504MH-Litecoin-Included/dp/B075VRWXTT" class="widget-list-item">
                 <div class="widget-list-media">
-                  <div class="img" style="background-image: url(https://via.placeholder.com/600x600)"></div>
+                  <div class="img" style="background-image: url(site_assets/admetro/img/scrypt_miner.jpg)"></div>
                 </div>
                 <div class="widget-list-content">
-                  <h4>DJI Mavic Pro Review</h4>
-                  <p>921k view</p>
-                </div>
-                <div class="widget-list-action">
-                  <i class="fa fa-angle-right fa-lg opacity-2"></i>
+                  <h4>AntMiner L3+ ~504MH/s @ 1.6W/MH ASIC Litecoin Miner</h4>
+                  <p></p>
                 </div>
               </a>
-              <a href="#" class="widget-list-item">
-                <div class="widget-list-media">
-                  <div class="img" style="background-image: url(https://via.placeholder.com/600x600)"></div>
-                </div>
-                <div class="widget-list-content">
-                  <h4>Phantom 4 Pro Technology</h4>
-                  <p>723k view</p>
-                </div>
-                <div class="widget-list-action">
-                  <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                </div>
-              </a>
+              
             </div>
             <!-- END widget-list-->
           </div>
@@ -370,61 +270,19 @@
             <!-- BEGIN card-header -->
             <div class="card-header card-header-inverse">
               <h4 class="card-header-title">
-                UPCOMING EVENTS
+                RECENT TWEETS
               </h4>
-              <div class="card-header-btn">
-                <a href="#" data-toggle="card-expand" class="btn btn-success"><i class="fa fa-expand"></i></a>
-                <a href="#" data-toggle="card-refresh" class="btn btn-warning"><i class="fa fa-redo"></i></a>
-                <a href="#" data-toggle="card-remove" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
-              </div>
             </div>
             <!-- END card-header -->
             <!-- BEGIN widget-reminder -->
             <div class="widget-reminder">
-              <div class="widget-reminder-header">TODAY, NOV 4</div>
-              <div class="widget-reminder-item">
-                <div class="widget-reminder-time">09:00<br>12:00</div>
-                <div class="widget-reminder-divider bg-success"></div>
-                <div class="widget-reminder-content">
-                  <h4 class="widget-title">Meeting with HR</h4>
-                  <div class="widget-desc"><i class="ti-pin"></i> Conference Room</div>
-                </div>
-              </div>
-              <div class="widget-reminder-item">
-                <div class="widget-reminder-time">20:00<br>23:00</div>
-                <div class="widget-reminder-divider bg-primary"></div>
-                <div class="widget-reminder-content">
-                  <h4 class="widget-title">Dinner with Richard</h4>
-                  <div class="widget-desc"><i class="ti-pin"></i> Tom's Too Restaurant</div>
-                  <div class="m-t-10 p-t-3">
-                    <a href="#" class="pull-right">Contact</a>
-                    <img src="https://via.placeholder.com/60x60" width="16" class="img-circle pull-left m-r-5" alt="" /> Richard Leong 
-                  </div>
-                </div>
-              </div>
-              <div class="widget-reminder-header">TOMORROW, NOV 5</div>
-              <div class="widget-reminder-item">
-                <div class="widget-reminder-time">All day</div>
-                <div class="widget-reminder-divider bg-success"></div>
-                <div class="widget-reminder-content">
-                  <h4 class="widget-title"><i class="ti-gift text-success"></i> Terry Birthday</h4>
-                </div>
-              </div>
-              <div class="widget-reminder-item">
-                <div class="widget-reminder-time">08:00</div>
-                <div class="widget-reminder-divider bg-warning"></div>
-                <div class="widget-reminder-content">
-                  <h4 class="widget-title"><i class="ti-gift text-warning"></i> Meeting</h4>
-                </div>
-              </div>
-              <div class="widget-reminder-item">
-                <div class="widget-reminder-time">00:00<br>00:30</div>
-                <div class="widget-reminder-divider bg-danger"></div>
-                <div class="widget-reminder-content">
-                  <h4 class="widget-title">Server Maintenance</h4>
-                  <div class="widget-desc"><i class="ti-pin"></i> Data Centre</div>
-                </div>
-              </div>
+             
+                             {literal}
+               <a class="twitter-timeline" height="250" href="https://twitter.com/marscoinorg" data-chrome="nofooter transparent noscrollbar" data-widget-id="492843006043516928">Tweets by @marscoinorg</a>
+                }
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              {/literal}
+
             </div>
             <!-- END widget-reminder -->
           </div>
@@ -432,250 +290,14 @@
         </div>
         <!-- END col-4 -->
         <!-- BEGIN col-4 -->
-        <div class="col-xl-4 col-sm-6">
-          <!-- BEGIN card -->
-          <div class="card mb-3">
-            <!-- BEGIN card-header -->
-            <div class="card-header card-header-inverse">
-              <h4 class="card-header-title">
-                GROUP DISCUSSION
-              </h4>
-              <div class="card-header-btn">
-                <a href="#" data-toggle="card-expand" class="btn btn-success"><i class="fa fa-expand"></i></a>
-                <a href="#" data-toggle="card-refresh" class="btn btn-warning"><i class="fa fa-redo"></i></a>
-                <a href="#" data-toggle="card-remove" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
-              </div>
-            </div>
-            <!-- END card-header -->
-            <!-- BEGIN widget-list -->
-            <div class="widget-list bg-yellow">
-              <a href="#" class="widget-list-item">
-                <div class="widget-list-content">
-                  <h4>App Development</h4>
-                  <p>32 message</p>
-                </div>
-                <div class="widget-list-action">
-                  <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                </div>
-              </a>
-            </div>
-            <!-- END widget-list -->
-            <!-- BEGIN widget-body -->
-            <div data-scrollbar="true" data-height="17rem">
-              <!-- BEGIN widget-chat -->
-              <div class="widget-chat">
-                <div class="widget-chat-item">
-                  <div class="widget-chat-media"><img src="https://via.placeholder.com/60x60" alt="" /></div>
-                  <div class="widget-chat-content">
-                    <div class="widget-chat-name">Roberto Lambert</div>
-                    <div class="widget-chat-message last">
-                      Hey, I'm testing out group messaging.
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-chat-item reply">
-                  <div class="widget-chat-content">
-                    <div class="widget-chat-message last">
-                      Cool
-                    </div>
-                    <div class="widget-chat-status"><b>Read</b> 16:26</div>
-                  </div>
-                </div>
-                <div class="widget-chat-item widget-chat-date">Today 14:21</div>
-                <div class="widget-chat-item">
-                  <div class="widget-chat-media"><img src="https://via.placeholder.com/60x60" alt="" /></div>
-                  <div class="widget-chat-content">
-                    <div class="widget-chat-name">Rick Powell</div>
-                    <div class="widget-chat-message last">
-                      Awesome! What's new?
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-chat-item">
-                  <div class="widget-chat-media"><img src="https://via.placeholder.com/60x60" alt="" /></div>
-                  <div class="widget-chat-content">
-                    <div class="widget-chat-name">Roberto Lambert</div>
-                    <div class="widget-chat-message">
-                      Not much, It's got a new look, contact pics show up in group messaging, some other small stuff.
-                    </div>
-                    <div class="widget-chat-message last">
-                      How's crusty old iOS 6 treating you?
-                    </div>
-                  </div>
-                </div>
-                <div class="widget-chat-item reply">
-                  <div class="widget-chat-content">
-                    <div class="widget-chat-message last">
-                      Sucks
-                    </div>
-                    <div class="widget-chat-status"><b>Read</b> 16:30</div>
-                  </div>
-                </div>
-              </div>
-              <!-- END widget-chat -->
-            </div>
-            <!-- END widget-body -->
-            <!-- BEGIN card-footer -->
-            <div class="card-footer">
-              <div class="input-group input-group-sm">
-                <input type="text" class="form-control" placeholder="Search for...">
-                <span class="input-group-append">
-                  <button class="btn btn-primary" type="button">Send <i class="ti-arrow-right"></i></button>
-                </span>
-              </div>
-            </div>
-            <!-- END card-footer -->
-          </div>
-          <!-- END card -->
-        </div>
+        
+        <!-- BEGIN col-4 -->
+        
         <!-- END col-4 -->
         <!-- BEGIN col-4 -->
-        <div class="col-xl-4 col-sm-6">
-          <!-- BEGIN card -->
-          <div class="card mb-3">
-            <!-- BEGIN card-header -->
-            <div class="card-header card-header-inverse">
-              <h4 class="card-header-title">
-                APP MANAGEMENT
-              </h4>
-              <div class="card-header-btn">
-                <a href="#" data-toggle="card-expand" class="btn btn-success"><i class="fa fa-expand"></i></a>
-                <a href="#" data-toggle="card-refresh" class="btn btn-warning"><i class="fa fa-redo"></i></a>
-                <a href="#" data-toggle="card-remove" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
-              </div>
-            </div>
-            <!-- END card-header -->
-            <!-- BEGIN card-body -->
-            <div class="card-body">
-              <div class="widget-list widget-list-full-width">
-                <a href="#" class="widget-list-item">
-                  <div class="widget-list-media widget-list-media-lg">
-                    <i class="fa fa-play icon bg-gradient-blue text-white"></i>
-                  </div>
-                  <div class="widget-list-content">
-                    <h4>The Chainsmokers</h4>
-                    <p class="mb-1">Youtube</p>
-                    <div class="text-muted f-s-12">103,294 downloads</div>
-                  </div>
-                  <div class="widget-list-action">
-                    <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                  </div>
-                </a>
-                <a href="#" class="widget-list-item">
-                  <div class="widget-list-media widget-list-media-lg">
-                    <i class="fas fa-comment-dots icon bg-gradient-green text-white"></i>
-                  </div>
-                  <div class="widget-list-content">
-                    <h4>Whatsapp Chat</h4>
-                    <p class="mb-1">Apps Store</p>
-                    <div class="text-muted f-s-12">94,122 downloads</div>
-                  </div>
-                  <div class="widget-list-action">
-                    <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                  </div>
-                </a>
-                <a href="#" class="widget-list-item">
-                  <div class="widget-list-media widget-list-media-lg">
-                    <i class="fa fa-music icon bg-gradient-red text-white"></i>
-                  </div>
-                  <div class="widget-list-content">
-                    <h4>Movie Player</h4>
-                    <p class="mb-1">Apps Store</p>
-                    <div class="text-muted f-s-12">80,897 downloads</div>
-                  </div>
-                  <div class="widget-list-action">
-                    <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                  </div>
-                </a>
-                <a href="#" class="widget-list-item">
-                  <div class="widget-list-media widget-list-media-lg">
-                    <i class="fa fa-camera icon bg-gradient-orange text-white"></i>
-                  </div>
-                  <div class="widget-list-content">
-                    <h4>Shooting Apps</h4>
-                    <p class="mb-1">PlayStore</p>
-                    <div class="text-muted f-s-12">77,421 downloads</div>
-                  </div>
-                  <div class="widget-list-action">
-                    <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                  </div>
-                </a>
-                <a href="#" class="widget-list-item">
-                  <div class="widget-list-media widget-list-media-lg">
-                    <i class="fa fa-headphones icon bg-gradient-purple text-white"></i>
-                  </div>
-                  <div class="widget-list-content">
-                    <h4>Music Player</h4>
-                    <p class="mb-1">Apple</p>
-                    <div class="text-muted f-s-12">60,112 downloads</div>
-                  </div>
-                  <div class="widget-list-action">
-                    <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <!-- END card-body -->
-          </div>
-          <!-- END card -->
-        </div>
-        <!-- END col-4 -->
-        <!-- BEGIN col-4 -->
-        <div class="col-xl-4 col-sm-6">
-          <!-- BEGIN card -->
-          <div class="card mb-3">
-            <!-- BEGIN card-header -->
-            <div class="card-header card-header-inverse">
-              <h4 class="card-header-title">
-                LATEST UPLOADED IMAGE
-              </h4>
-              <div class="card-header-btn">
-                <a href="#" data-toggle="card-expand" class="btn btn-success"><i class="fa fa-expand"></i></a>
-                <a href="#" data-toggle="card-refresh" class="btn btn-warning"><i class="fa fa-redo"></i></a>
-                <a href="#" data-toggle="card-remove" class="btn btn-danger"><i class="fa fa-trash-alt"></i></a>
-              </div>
-            </div>
-            <!-- END card-header -->
-            <!-- BEGIN widget-list -->
-            <div class="widget-list">
-              <a href="#" class="widget-list-item">
-                <div class="widget-list-content">
-                  <h4>Library (20)</h4>
-                  <p>3,192 Image Found</p>
-                </div>
-                <div class="widget-list-action">
-                  <i class="fa fa-angle-right fa-lg opacity-2"></i>
-                </div>
-              </a>
-            </div>
-            <!-- END widget-list -->
-            <!-- BEGIN widget-img-list -->
-            <div class="widget-img-list">
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-              <div class="widget-img-list-item"><a href="#" style="padding-top: 79px"><span class="img" style="background-image: url(https://via.placeholder.com/300x300)" alt="" class="img"></span></a></div>
-            </div>
-            <!-- END widget-img-list -->
-          </div>
-          <!-- END card -->
-        </div>
+        
         <!-- END col-4 -->
       </div>
       <!-- END row -->
+
+      </div>

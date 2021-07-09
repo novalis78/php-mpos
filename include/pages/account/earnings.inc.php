@@ -13,6 +13,14 @@ if ($user->isAuthenticated() AND !$setting->getValue('disable_transactionsummary
   } else {
     $debug->append('Using cached page', 3);
   }
+
+$email = $_SESSION['USERDATA']['email'];
+$default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
+$size = 360;
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+$smarty->assign('GRAV_URL', $grav_url);
+
+  
   $smarty->assign('CONTENT', 'default.tpl');
 } else if (!$setting->getValue('disable_transactionsummary')) {
   $smarty->assign('CONTENT', 'disabled.tpl');

@@ -23,4 +23,12 @@ if ($user->isAuthenticated()) {
     $_SESSION['POPUP'][] = array('CONTENT' => 'Invitations are disabled', 'TYPE' => 'alert alert-danger');
   }
 }
+
+$email = $_SESSION['USERDATA']['email'];
+$default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
+$size = 360;
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+$smarty->assign('GRAV_URL', $grav_url);
+
+
 $smarty->assign('CONTENT', 'default.tpl');

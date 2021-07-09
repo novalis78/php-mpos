@@ -263,6 +263,12 @@ foreach ($aMonitorCrons as $strCron) {
 if ($bMessage)
   $_SESSION['POPUP'][] = array('CONTENT' => implode($aCronMessage, ''), 'DISMISS' => 'yes', 'ID' => 'backend', 'TYPE' => 'alert alert-warning');
 
+$email = $_SESSION['USERDATA']['email'];
+$default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
+$size = 360;
+$grav_url = "https://www.gravatar.com/avatar/" . md5( strtolower( trim( $email ) ) ) . "?d=" . urlencode( $default ) . "&s=" . $size;
+$smarty->assign('GRAV_URL', $grav_url);
+
 // Make it available in Smarty
 $smarty->assign('PATH', 'site_assets/' . THEME);
 $smarty->assign('GLOBALASSETS', 'site_assets/global');
