@@ -22,21 +22,21 @@
                   
                     <li {if $smarty.get.page|default:"0" eq ""}class="active"{/if}>
                         <a href="{$smarty.server.SCRIPT_NAME}">
-                          <span class="nav-icon"><i class="fa fa-home fa-fw"></i></span>
+                          <span class="nav-icon"><i class="fa fa-home fa-fw bg-gradient-red text-white"></i></span>
                           <span class="nav-text">Home</span>
                         </a>
                     </li>
                     {if $smarty.session.AUTHENTICATED|default:"0" == 1}
                     <li {if $smarty.get.page|default:"0" eq "dashboard"}class="active"{/if} >
                         <a href="{$smarty.server.SCRIPT_NAME}?page=dashboard">
-                          <span class="nav-icon"><i class="fa fa-dashboard fa-fw"></i></span>
+                          <span class="nav-icon"><i class="fas fa-tachometer-alt fa-fw bg-gradient-orange text-white"></i></span>
                           <span class="nav-text">Dashboard</span>
                         </a>
                     </li>
 
                     <li class="has-sub" {if $smarty.get.page|default:"0" eq "account"}class="active"{/if}>
                         <a href="#">
-                          <span class="nav-icon"><i class="fa fa-user-md fa-fw"></i></span>
+                          <span class="nav-icon"><i class="fa fa-user-md fa-fw bg-gradient-green text-white"></i></span>
                           <span class="nav-text">My Account</span>
                           <span class="nav-caret"><b class="caret"></b></span>
                         </a>
@@ -61,7 +61,7 @@
                           {if !$GLOBAL.config.disable_transactionsummary}
                             <li>
                               <a href="{$smarty.server.SCRIPT_NAME}?page=account&action=earnings">
-                                <span class="nav-icon"><i class="fa fa-money fa-fw"></i></span>
+                                <span class="nav-icon"><i class="fas fa-dollar-sign fa-fw"></i></span>
                                 <span class="nav-text">Earnings</span>
                               </a>
                             </li>{/if}
@@ -83,13 +83,13 @@
                     {if $smarty.session.AUTHENTICATED|default:"0" == 1 && $GLOBAL.userdata.is_admin == 1}
                     <li class="has-sub" {if $smarty.get.page|default:"0" eq "admin"}class="active"{/if}>
                         <a href="#">
-                          <span class="nav-icon"><i class="fa fa-wrench fa-fw"></i></span>
+                          <span class="nav-icon"><i class="bg-gradient-orange text-white fa fa-wrench fa-fw"></i></span>
                           <span class="nav-text"> Admin Panel</span>
                           <span class="nav-caret"><b class="caret"></b></span>
                         <ul class="nav-submenu">
                           <li class="has-sub" {if $smarty.get.action|default:"0" eq "dashboard" || $smarty.get.action|default:"0" eq "monitoring" || $smarty.get.action|default:"0" eq "settings" || $smarty.get.action|default:"0" eq "setup"}class="active"{/if}>
                             <a href="#">
-                              <span class="nav-icon"><i class="fa fa-linux fa-fw"></i></span> 
+                              <span class="nav-icon"><i class="fas fa-cogs fa-fw"></i></span> 
                               <span class="nav-text"> System</span>
                               <span class="nav-caret"><b class="caret"></b></span>
                             <ul class="nav-submenu">
@@ -98,28 +98,28 @@
                                 <span class="nav-text"> Setup</span>
                                 </a></li>
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=dashboard">
-                                <span class="nav-icon"><i class="fa fa-dashboard fa-fw"></i></span> 
-                                <span class="nav-icon"> Dashboard</span>
+                                <span class="nav-icon"><i class="fas fa-tachometer-alt fa-fw"></i></span> 
+                                <span class="nav-text"> Dashboard</span>
                                 </a></li>
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=monitoring">
-                                  <span class="nav-icon"><i class="fa fa-bell-o fa-fw"></i></span>
+                                  <span class="nav-icon"><i class="fas fa-digital-tachograph fa-fw"></i></span>
                                   <span class="nav-text"> Monitoring</span>
                                 </a></li>
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=settings">
-                                <span class="nav-icon"><i class="fa fa-gears fa-fw"></i></span>
+                                <span class="nav-icon"><i class="fas fa-cogs fa-fw"></i></span>
                                 <span class="nav-text"> Settings</span>
                                 </a></li>
                             </ul>
                           </li>
                           <li class="has-sub" {if $smarty.get.action|default:"0" eq "wallet" || $smarty.get.action|default:"0" eq "transactions"}class="active"{/if}>
                             <a href="#">
-                              <span class="nav-icon"><i class="fa fa-usd fa-fw"></i></span> 
-                              <span class="nav-text"> Funds <span class="fa arrow"></span>
+                              <span class="nav-icon"><i class="fas fa-dollar-sign fa-fw"></i></span> 
+                              <span class="nav-text"> Funds</span>
                               <span class="nav-caret"><b class="caret"></b></span>
                             </a>
                             <ul class="nav-submenu">
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=wallet">
-                                <span class="nav-icon"><i class="fa fa-money fa-fw"></i></span> 
+                                <span class="nav-icon"><i class="fas fa-wallet fa-fw"></i></span> 
                                 <span class="nav-text"> Wallet Info</span>
                               </a></li>
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=transactions">
@@ -129,17 +129,21 @@
                             </ul>
                           </li>
                           <li class="has-sub" {if $smarty.get.action|default:"0" eq "news" || $smarty.get.action|default:"0" eq "newsletter"}class="active"{/if}>
-                            <a href="#"><i class="fa fa-info fa-fw"></i> News <span class="fa arrow"></span></a>
-                            <ul class="nav-submenu">
-                              <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=news">
-                                <span class="nav-icon"><i class="fa fa-list-alt fa-fw"></i></span>
-                                <span class="nav-text"> Site News</span>
-                              </a></li>
-                              <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=newsletter">
-                                <span class="nav-icon"><i class="fa fa-list-alt fa-fw"></i></span>
-                                <span class="nav-text"> Newsletter</span>
-                              </a></li>
-                            </ul>
+                            <a href="#">
+                              <span class="nav-icon"><i class="fa fa-info fa-fw"></i></span>
+                              <span class="nav-text"> News</span>
+                              <span class="nav-caret"><b class="caret"></b></span>
+                             </a>
+                                <ul class="nav-submenu">
+                                  <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=news">
+                                    <span class="nav-icon"><i class="fa fa-list-alt fa-fw"></i></span>
+                                    <span class="nav-text"> Site News</span>
+                                  </a></li>
+                                  <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=newsletter">
+                                    <span class="nav-icon"><i class="fa fa-list-alt fa-fw"></i></span>
+                                    <span class="nav-text"> Newsletter</span>
+                                  </a></li>
+                                </ul>
                           </li>
                           <li class="has-sub" {if $smarty.get.action|default:"0" eq "user" || $smarty.get.action|default:"0" eq "reports" || $smarty.get.action|default:"0" eq "registrations" || $smarty.get.action|default:"0" eq "invitations" || $smarty.get.action|default:"0" eq "poolworkers"}class="active"{/if}>
                             <a href="#">
@@ -157,8 +161,8 @@
                                 <span class="nav-text"> Reports</span>
                                 </a></li>
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=registrations">
-                               <span class="nav-icon"><i class="fa fa-pencil-square-o fa-fw"></i></span> 
-                                <span class="nav-text">Registrations</span>
+                               <span class="nav-icon"><i class="fas fa-pen-square fa-fw"></i></span> 
+                                <span class="nav-text"> Registrations</span>
                               </a></li>
                               <li><a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=invitations">
                                 <span class="nav-icon"><i class="fa fa-users fa-fw"></i></span>
@@ -175,7 +179,7 @@
                     {if ($GLOBAL.acl.statistics.loggedin|default:"0" == 0 && ($smarty.session.AUTHENTICATED|default:"0" == 0 OR $smarty.session.AUTHENTICATED|default:"0" == 1)) OR ($GLOBAL.acl.statistics.loggedin|default:"0" == 1 && $smarty.session.AUTHENTICATED|default:"0" == 1)}
                     <li class="has-sub" {if $smarty.get.page|default:"0" eq "statistics"}class="active"{/if}>
                         <a href="#">
-                          <span class="nav-icon"><i class="fa fa-bar-chart-o fa-fw"></i></span>
+                          <span class="nav-icon"><i class="bg-gradient-purple text-white fas fa-chart-pie fa-fw"></i></span>
                           <span class="nav-text"> Statistics</span>
                           <span class="nav-caret"><b class="caret"></b></span>
                         <ul class="nav-submenu">
@@ -193,7 +197,7 @@
                     {if ($GLOBAL.acl.help.loggedin|default:"0" == 0 && ($smarty.session.AUTHENTICATED|default:"0" == 0 OR $smarty.session.AUTHENTICATED|default:"0" == 1)) OR ($GLOBAL.acl.help.loggedin|default:"0" == 1 && $smarty.session.AUTHENTICATED|default:"0" == 1)}
                     <li class="has-sub" {if $smarty.get.page|default:"0" eq "gettingstarted" || $smarty.get.page|default:"0" eq "about"}class="active"{/if}>
                         <a href="#">
-                          <span class="nav-icon"><i class="fa fa-question fa-fw"></i></span>
+                          <span class="nav-icon"><i class="bg-gradient-blue text-white fa fa-question fa-fw"></i></span>
                           <span class="nav-text"> Help</span>
                           <span class="nav-caret"><b class="caret"></b></span>
                         <ul class="nav-submenu">
@@ -208,32 +212,20 @@
                         <!-- /.nav-second-level -->
                     </li>
                     {/if}
-                    <li class="has-sub" {if $smarty.get.page|default:"0" eq "register" || $smarty.get.page|default:"0" eq "login" || $smarty.get.page|default:"0" eq "logout" || $smarty.get.page|default:"0" eq "tac" || $smarty.get.page|default:"0" eq "contactform"}class="active"{/if}>
-                        <a href="#">
-                          <span class="nav-icon"><i class="fa fa-tasks fa-fw"></i></span>
-                          <span class="nav-text"> Other</span>
-                          <span class="nav-caret"><b class="caret"></b></span>
-                       <ul class="nav-submenu">
-                          {if $smarty.session.AUTHENTICATED|default:"0" == 1}
-                          <li><a href="{$smarty.server.SCRIPT_NAME}?page=logout">
-                            <span class="nav-icon"><i class="fa fa-sign-out fa-fw"></i></span>
-                            <span class="nav-text"> Logout</span>
-                            </a></li>
-                          {else}
-                          <li><a href="{$smarty.server.SCRIPT_NAME}?page=login">
-                            <span class="nav-icon"><i class="fa fa-sign-in fa-fw"></i></span>
-                            <span class="nav-text"> Login</span></a></li>
-                          <li><a href="{$smarty.server.SCRIPT_NAME}?page=register">
-                            <span class="nav-icon"><i class="fa fa-pencil fa-fw"></i></span> 
-                            <span class="nav-text"> Sign Up</a></span></li>
-                          {/if}
-                          {acl_check page='contactform' action='' name='<i class="fa fa-envelope fa-fw"></i> Contact' acl=$GLOBAL.acl.contactform}
-                          <li><a href="{$smarty.server.SCRIPT_NAME}?page=tac">
-                            <span class="nav-icon"><i class="fa fa-book fa-fw"></i></span>
-                            <span class="nav-text"> Terms and Conditions</span>
-                            </a></li>
-                        </ul>
-                        <!-- /.nav-second-level -->
+
+                    <li >
+                        <a href="{$smarty.server.SCRIPT_NAME}?page=dashboard">
+                          <span class="nav-icon"><i class="fas fa-sign-out-alt fa-fw "></i></span>
+                          <span class="nav-text">Logout</span>
+                        </a>
+                    </li>
+
+                    
+                    <li><a href="{$smarty.server.SCRIPT_NAME}?page=tac">
+                      <span class="nav-icon"><i class="fa fa-book fa-fw"></i></span>
+                      <span class="nav-text"> Terms and Conditions</span>
+                      </a>
+                        
                     </li>
 
 
