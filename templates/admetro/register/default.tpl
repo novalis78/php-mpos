@@ -16,7 +16,7 @@
         </div>
         <!-- END register-brand -->
         <h3 class="m-b-20"><span>Sign Up</span></h3>
-        <p class="m-b-20">One Admin ID is all you need to access all the Admin services.</p>
+        <p class="m-b-20"></p>
         <!-- BEGIN register-form -->
         <form class="panel panel-info" method="post" role="form">
           <input type="hidden" name="page" value="{$smarty.request.page|escape}">
@@ -34,7 +34,7 @@
               </div>
               {if $GLOBAL.coinaddresscheck|default:"1"}
               <div class="form-group">
-                <label>Username <span class="text-danger">*</span></label>
+                <label>Coinaddress <span class="text-danger">*</span></label>
                 <input type="text" name="coinaddress" placeholder="Coin Address" class="form-control" value="{$smarty.post.coinaddress|escape|default:""}" size="15" required>
               </div>
               {/if}
