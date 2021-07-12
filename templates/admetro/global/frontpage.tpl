@@ -6,7 +6,7 @@
 		<!-- END coming-soon-cover -->
 		<!-- BEGIN coming-soon-content -->
 		<div class="coming-soon-content">
-			<h1>Mines of Marscoin</h1>
+			<h1>Martian Mines</h1>
 			<div class="coming-soon-timer">
 				<div id="timer"></div>
 			</div>
