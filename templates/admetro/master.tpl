@@ -30,7 +30,7 @@
       <!-- END navbar-toggle-minify -->
       <!-- BEGIN navbar-header -->
       <div class="navbar-header">
-        <a href="index.html" class="navbar-brand">
+        <a href="/" class="navbar-brand">
           MartianMines
         </a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
@@ -69,7 +69,7 @@
       {/section}
     {/if}
     {/nocache}
-    
+
     {if $CONTENT != "empty" && $CONTENT != ""}
       {if file_exists($smarty.current_dir|cat:"/$PAGE/$ACTION/$CONTENT")}
         {include file="$PAGE/$ACTION/$CONTENT"}
@@ -95,6 +95,10 @@
   <!-- ================== END PAGE LEVEL JS ================== -->
 {else if $PAGE == "login"}
 {include file="login/default.tpl"}
+{else if $PAGE == "password"}
+{include file="password/default.tpl"}
+{else if $PAGE == "change"}
+{include file="password/change/default.tpl"}
 {else if $PAGE == "register"}
 {include file="register/default.tpl"}
 {else}

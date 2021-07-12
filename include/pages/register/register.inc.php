@@ -36,7 +36,7 @@ if ($setting->getValue('disable_invitations') && $setting->getValue('lock_regist
         $_SESSION['POPUP'][] = array('CONTENT' => 'Please enter a valid Wallet Address', 'TYPE' => 'alert alert-danger');
       } else {
         if ($user->register(@$_POST['username'], $validcoinaddress, @$_POST['password1'], @$_POST['password2'], @$_POST['pin'], @$_POST['email1'], @$_POST['email2'], @$_POST['tac'], $token)) {
-          (!$setting->getValue('accounts_confirm_email_disabled')) ? $_SESSION['POPUP'][] = array('CONTENT' => 'Please check your mailbox to activate this account') : $_SESSION['POPUP'][] = array('CONTENT' => 'Account created, please login');
+          (!$setting->getValue('accounts_confirm_email_disabled')) ? $_SESSION['POPUP'][] = array('CONTENT' => 'Please check your mailbox to activate this account') : $_SESSION['POPUP'][] = array('CONTENT' => 'Account created, please login <a href="/index.php?page=login">here</a>');
         } else {
           $_SESSION['POPUP'][] = array('CONTENT' => 'Unable to create account: ' . $user->getError(), 'TYPE' => 'alert alert-danger');
         }

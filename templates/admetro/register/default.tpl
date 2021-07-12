@@ -13,7 +13,7 @@
       <div class="register-content">
         <!-- BEGIN register-brand -->
         <div class="register-brand">
-          <a href="#"><b>Martian</b>Mines</a>
+          <a href="/"><b>Martian</b>Mines</a>
         </div>
         <!-- END register-brand -->
         <h3 class="m-b-20"><span>Sign Up</span></h3>
