@@ -47,6 +47,29 @@
     {include file="global/navigation.tpl"}
     
     
+
+    {nocache}
+    {if is_array($smarty.session.POPUP|default)}
+      {section popup $smarty.session.POPUP}
+      <div class="{if $smarty.session.POPUP[popup].DISMISS|default:"" == "yes"}alert-dismissable {/if} {$smarty.session.POPUP[popup].TYPE|default:"alert alert-info"} {if $smarty.session.POPUP[popup].ID|default:"static" == "static" AND $GLOBAL.website.notificationshide == 1}autohide{/if}" id="{$smarty.session.POPUP[popup].ID|default:"static"}">
+        {if $smarty.session.POPUP[popup].DISMISS|default:"no" == "yes"}
+        <button id="{$smarty.session.POPUP[popup].ID|default:"static"}" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        {/if}
+        {if $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-info"}
+        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-warning"}
+        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-danger"}
+        <span class="glyphicon glyphicon-remove-circle">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-success"}
+        <span class="glyphicon glyphicon-ok-circle">&nbsp;</span>
+        {/if}
+        {$smarty.session.POPUP[popup].CONTENT nofilter}
+      </div>
+      {/section}
+    {/if}
+    {/nocache}
+    
     {if $CONTENT != "empty" && $CONTENT != ""}
       {if file_exists($smarty.current_dir|cat:"/$PAGE/$ACTION/$CONTENT")}
         {include file="$PAGE/$ACTION/$CONTENT"}
