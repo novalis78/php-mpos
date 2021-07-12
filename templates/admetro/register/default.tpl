@@ -50,7 +50,7 @@
              
               <div class="form-group">
                 <label>Password <span class="text-danger">*</span> (<span id="pw_strength">Strength</span>)</label>
-                <input type="password" class="form-control" value="" />
+                <input type="password" class="form-control" name="password1" placeholder="Password" value="" size="15" maxlength="100" id="pw_field" required>
               </div>
               <span id="pw_match"></span>
               <div class="form-group">
