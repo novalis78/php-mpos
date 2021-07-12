@@ -20,6 +20,30 @@
         <p class="m-b-20"></p>
         <!-- BEGIN register-form -->
         <form class="panel panel-info" method="post" role="form">
+
+
+    {nocache}
+    {if is_array($smarty.session.POPUP|default)}
+      {section popup $smarty.session.POPUP}
+      <div class="{if $smarty.session.POPUP[popup].DISMISS|default:"" == "yes"}alert-dismissable {/if} {$smarty.session.POPUP[popup].TYPE|default:"alert alert-info"} {if $smarty.session.POPUP[popup].ID|default:"static" == "static" AND $GLOBAL.website.notificationshide == 1}autohide{/if}" id="{$smarty.session.POPUP[popup].ID|default:"static"}">
+        {if $smarty.session.POPUP[popup].DISMISS|default:"no" == "yes"}
+        <button id="{$smarty.session.POPUP[popup].ID|default:"static"}" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        {/if}
+        {if $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-info"}
+        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-warning"}
+        <span class="glyphicon glyphicon-info-sign">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-danger"}
+        <span class="glyphicon glyphicon-remove-circle">&nbsp;</span>
+        {elseif $smarty.session.POPUP[popup].TYPE|default:"alert alert-info" == "alert alert-success"}
+        <span class="glyphicon glyphicon-ok-circle">&nbsp;</span>
+        {/if}
+        {$smarty.session.POPUP[popup].CONTENT nofilter}
+      </div>
+      {/section}
+    {/if}
+    {/nocache}
+
           <input type="hidden" name="page" value="{$smarty.request.page|escape}">
           {if $smarty.request.token|default:""}
           <input type="hidden" name="token" value="{$smarty.request.token|escape}">
