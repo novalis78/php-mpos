@@ -9,11 +9,11 @@
 
  <div class="row">
     <div class="col-lg-12">
-      <div class="panel panel-info">
-        <div class="panel-heading">
-          <i class="fa fa-question fa-fw"></i> Getting Started Guide
+      <div class="card panel-info">
+        <div class="card-header">
+          Getting Started Guide
         </div>
-        <div class="panel-body">
+        <div class="card-body">
         
 
     <p>1. <strong>Buy an ASIC Miner for scrypt mining</strong></p>
@@ -39,7 +39,7 @@
       
       <br />
 	  
-    <p>4. <strong>Create a Marscoin address to receive payments.</strong></p>
+    <p>3. <strong>Create a Marscoin address to receive payments.</strong></p>
       <ul>
         <li> Downloading the client &amp; block chain: 	Download the Marscoin client from <a href="https://www.marscoin.org/" target="_blank">here</a>.
           <p>Generate a new address and input it on your account page to receive payments.</p>

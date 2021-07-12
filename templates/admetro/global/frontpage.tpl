@@ -20,6 +20,7 @@
 		<!-- BEGIN coming-soon-footer -->
 		<div class="coming-soon-footer">
 			<div class="social-list">
+				<a href="https://discord.gg/XTm3XEURET"><i class="fab fa-discord"></i></a>
 				<a href="https://www.facebook.com/marscoin"><i class="fab fa-facebook"></i></a>
 				<a href="https://www.instagram.com/marscoin"><i class="fab fa-instagram"></i></a>
 				<a href="https://www.twitter.com/marscoinorg"><i class="fab fa-twitter"></i></a>

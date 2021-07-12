@@ -1,9 +1,5 @@
 <ul class="navbar-nav navbar-right">
-        <li class="nav-item">
-          <a href="#" data-toggle="search-bar" class="nav-link">
-            <i class="fa fa-search nav-icon"></i>
-          </a>
-        </li>
+
         <li class="nav-item dropdown">
           <a href="#" data-toggle="dropdown" data-display="static" class="nav-link">
             <i class="far fa-bell nav-icon"></i>
@@ -108,14 +104,14 @@
             </a>
             <div class="dropdown-menu dropdown-menu-right">
                 {if $smarty.session.AUTHENTICATED|default:"0" == 1}
-                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=dashboard"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=account&action=edit"><i class="fa fa-gear fa-fw"></i> Settings</a>
-                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=account&action=workers"><i class="fa fa-desktop fa-fw"></i> Workers</a>
+                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=dashboard"><i class="fas fa-tachometer-alt fa-fw"></i> Dashboard</a>
+                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=account&action=edit"><i class="fa fa-cogs fa-fw"></i> Settings</a>
+                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=account&action=workers"><i class="fas fa-wrench fa-fw"></i> Workers</a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=logout"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=logout"><i class="fas fa-sign-out-alt fa-fw"></i> Logout</a>
                 {else}
-                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=login"><i class="fa fa-sign-in fa-fw"></i> Login</a>
-                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=register"><i class="fa fa-pencil fa-fw"></i> Sign Up</a>
+                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=login"><i class="fas fa-sign-in-alt fa-fw"></i> Login</a>
+                <a class="dropdown-item" href="{$smarty.server.SCRIPT_NAME}?page=register"><i class="fas fa-pencil-alt fa-fw"></i> Sign Up</a>
                 {/if}
             </div>
         </li>
@@ -124,21 +120,3 @@
 </ul>
   
 
- 
-
-
-
-
-      <!-- BEGIN navbar-search -->
-      <div class="navbar-search">
-        <form action="#" method="POST" name="navbar_search_form">
-          <div class="form-group">
-            <div class="icon"><i class="fa fa-search"></i></div>
-            <input type="text" class="form-control" id="header-search" placeholder="Search ..." />
-            <div class="icon">
-              <a href="#" data-dismiss="search-bar" class="right-icon"><i class="fa fa-times"></i></a>
-            </div>
-          </div>
-        </form>
-      </div>
-      <!-- END navbar-search -->

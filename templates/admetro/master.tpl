@@ -31,7 +31,7 @@
       <!-- BEGIN navbar-header -->
       <div class="navbar-header">
         <a href="index.html" class="navbar-brand">
-          Marscoin Pool
+          MartianMines
         </a>
         <button type="button" class="navbar-toggle" data-click="sidebar-toggled">
           <span class="icon-bar"></span>
