@@ -1,7 +1,15 @@
+
+<!-- BEGIN #content -->
+<div id="content" class="app-content">
+  <!-- BEGIN page-header -->
+  <h1 class="page-header">
+    Settings
+  </h1>
+
 <div class="row">
   <div class="col-lg-12">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-gear fa-fw"></i> Settings
       </div>           
       <form method="POST" role="form">
@@ -9,10 +17,10 @@
         <input type="hidden" name="action" value="{$smarty.request.action|escape}" />
         <input type="hidden" name="do" value="save" />
         <input type="hidden" name="ctoken" value="{$CTOKEN|escape|default:""}" />
-        <div class="panel-body">
-          <ul class="nav nav-pills">
+        <div class="card-body">
+          <ul class="nav nav-tabs">
             {foreach item=TAB from=array_keys($SETTINGS)}
-            <li {if $TAB == 'website'}class="active"{/if}><a href="#{$TAB}" data-toggle="tab">{$TAB|capitalize}</a></li>
+            <li class="nav-link {if $TAB == 'website'} show{/if}"><a href="#{$TAB}" data-toggle="tab">{$TAB|capitalize}</a></li>
             {/foreach}
           </ul>
           <div class="tab-content">
@@ -39,10 +47,12 @@
           </div>
           
         </div>
-        <div class="panel-footer">
+        <div class="card-footer">
           <input type="submit" value="Save" class="btn btn-success btn-sm">
         </div>
       </form>
     </div>
   </div>
+</div>
+
 </div>

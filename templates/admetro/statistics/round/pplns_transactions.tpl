@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-lg-12">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-heading">
         <i class="fa fa-credit-card fa-fw"></i> Round Transactions
       </div>
-      <div class="panel-body ">
+      <div class="card-body ">
         <div class="table-responsive">
           <table class="table table-striped table-bordered table-hover {if $ROUNDTRANSACTIONS}datatable{/if}">
             <thead>

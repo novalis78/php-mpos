@@ -1,9 +1,9 @@
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-th fa-fw"></i> Last Found Blocks
       </div>
-      <div class="panel-body no-padding table-responsive">
+      <div class="card-body no-padding table-responsive">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
@@ -31,7 +31,7 @@
         </table>
       </div>
 {if $GLOBAL.config.payout_system != 'pps'}
-      <div class="panel-footer">
+      <div class="card-footer">
           <h6>Note: Round Earnings are not credited until <font class="confirmations">{$GLOBAL.confirmations}</font> confirms.</h6>
       </div>
 {/if}

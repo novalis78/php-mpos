@@ -1,8 +1,17 @@
 
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        Donations <small></small>
+      </h1>
+      <!-- END page-header -->
+
+
+
 <div class="col-lg-12">
-    <div class="panel panel-info">
-      <div class="panel-heading"><i class="fa fa-clock-o fa-fw"></i> UptimeRobot Status</div>
-      <div class="panel-body no-padding table-responsive">
+    <div class="card panel-info">
+      <div class="card-header"><i class="fa fa-clock-o fa-fw"></i> UptimeRobot Status</div>
+      <div class="card-body no-padding table-responsive">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
@@ -57,8 +66,11 @@
           </tbody>
         </table>
       </div>
-      <div class="panel-footer">
+      <div class="card-footer">
         <h6>Last update {$UPDATED|date_format:$GLOBAL.config.date}</h6>
       </div>
     </div>
+  </div>
+
+
   </div>

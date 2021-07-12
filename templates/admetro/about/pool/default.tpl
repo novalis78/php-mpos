@@ -1,3 +1,12 @@
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        About <small></small>
+      </h1>
+      <!-- END page-header -->
+
+
+
   <div class="row">
     <div class="col-lg-12">
       <div class="panel panel-info">
@@ -48,9 +57,10 @@
           </ul>
         </div>
         <div class="panel-footer">
-          <h6>This Pool is running <a href="https://github.com/TheSerapher/php-mpos">MPOS</a> project code. This frontend was created by <a href="https://github.com/MPOS/php-mpos">TheSerapher aka Sebastian Grewe</a>. The operation of the pool is soley at the hand of your trusted pool operator.</h6>
+          <h6>This Pool is running <a href="https://github.com/TheSerapher/php-mpos">MPOS</a> project code. This frontend was created by <a href="https://github.com/novalis78/php-mpos">Lennart Lopin</a>. Feel free to fork this project and spin up your own pool.</h6>
         </div>
       </div>
     </div>
   </div>
 
+</div>

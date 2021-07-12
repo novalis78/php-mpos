@@ -1,9 +1,9 @@
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-heading">
         <i class="fa fa-refresh fa-fw"></i> PPLNS Round Shares
       </div>
-      <div class="panel-body">
+      <div class="card-body">
         <div class="table-responsive">
           <table class="table table-striped table-bordered table-hover {if $PPLNSROUNDSHARES}datatable{/if}">
             <thead>

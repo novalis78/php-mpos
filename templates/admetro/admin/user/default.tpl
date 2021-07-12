@@ -1,3 +1,11 @@
+
+    <!-- BEGIN #content -->
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        User
+      </h1>
+
 <script language="javascript">
     function storeFee(id) {
       $.ajax({
@@ -147,4 +155,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>

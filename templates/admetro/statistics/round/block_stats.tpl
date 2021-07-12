@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-12">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-bar-chart fa-fw"></i> Block Statistics
       </div>
       <div class="table-responsive">
@@ -45,7 +45,7 @@
           </tbody>
         </table>
       </div>
-      <div class="panel-footer">
+      <div class="card-footer">
         <div class="submit_link">
           <form action="{$smarty.server.SCRIPT_NAME}" method="POST" id='search'>
             <input type="hidden" name="page" value="{$smarty.request.page|escape}">

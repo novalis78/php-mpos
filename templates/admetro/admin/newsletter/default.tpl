@@ -1,3 +1,11 @@
+
+<!-- BEGIN #content -->
+<div id="content" class="app-content">
+  <!-- BEGIN page-header -->
+  <h1 class="page-header">
+    Newsletter
+  </h1>
+
 <script src="{$PATH}/js/cleditor/jquery.cleditor.min.js"></script>
 <link rel="stylesheet" href="{$PATH}/js/cleditor/jquery.cleditor.css">
 <script type="text/javascript">
@@ -34,4 +42,6 @@
       </div>
     </div>
   </form>
+</div>
+
 </div>

@@ -1,3 +1,11 @@
+
+    <!-- BEGIN #content -->
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        Transactions
+      </h1>
+
 {if $DISABLE_TRANSACTIONSUMMARY|default:"0" != 1}
 <div class="row">
   <div class="col-lg-12">
@@ -132,4 +140,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>

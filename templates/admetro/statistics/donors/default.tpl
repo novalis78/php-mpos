@@ -1,10 +1,18 @@
+
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        Donations <small></small>
+      </h1>
+      <!-- END page-header -->
+
 <div class="row">
   <div class="col-lg-12">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-bitbucket fa-fw"></i> Pool Donors
       </div>
-      <div class="panel-body table-responsive">
+      <div class="card-body table-responsive">
       <table class="table table-striped table-bordered table-hover {if $DONORS}datatable{/if}">
         <thead>
           <tr>
@@ -30,4 +38,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-lg-6">
-    <div class="panel panel-info table-responsive">
-      <div class="panel-heading">
+    <div class="card panel-info table-responsive">
+      <div class="card-header">
         <i class="fa fa-bar-chart fa-fw"></i> Block Statistics
       </div>
       <ul class="pager">

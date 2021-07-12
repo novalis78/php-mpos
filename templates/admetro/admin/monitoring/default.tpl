@@ -1,10 +1,18 @@
+
+<!-- BEGIN #content -->
+<div id="content" class="app-content">
+  <!-- BEGIN page-header -->
+  <h1 class="page-header">
+    Monitoring
+  </h1>
+
 <div class="row">
   <div class="col-lg-12">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-bell-o fa-fw"></i> Monitoring
       </div>
-      <div class="panel-body no-padding table-responsive">
+      <div class="card-body no-padding table-responsive">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <th>Cronjob</th>
@@ -66,4 +74,6 @@
       </div>
     </div>
   </div>
+</div>
+
 </div>

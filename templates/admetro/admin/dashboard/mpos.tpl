@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-info fa-fw"></i> MPOS Version Information
       </div>
-      <div class="panel-body no-padding">
+      <div class="card-body no-padding">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
@@ -52,11 +52,11 @@
   </div>
   
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-question fa-fw"></i> MPOS Status
       </div>
-      <div class="panel-body no-padding">
+      <div class="card-body no-padding">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>

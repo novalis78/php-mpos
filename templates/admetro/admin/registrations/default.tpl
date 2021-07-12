@@ -1,3 +1,11 @@
+
+    <!-- BEGIN #content -->
+    <div id="content" class="app-content">
+      <!-- BEGIN page-header -->
+      <h1 class="page-header">
+        Registrations
+      </h1>
+
 {nocache}
 <div class="row">
   <div class="col-lg-12">
@@ -47,3 +55,5 @@
   </div>
 </div> 
 {/nocache}
+
+</div>

@@ -1,9 +1,9 @@
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-tachometer fa-fw"></i> Contributor Hashrates
       </div>
-      <div class="panel-body no-padding table-responsive">
+      <div class="card-body no-padding table-responsive">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
@@ -49,7 +49,7 @@
           </tbody>
         </table>
       </div>
-      <div class="panel-footer">
+      <div class="card-footer">
           <h6>
           <i class="fa fa-ban fa-fw"></i>no Donation
           <i class="fa fa-star-o fa-fw"></i> 0&#37;&#45;2&#37; Donation 

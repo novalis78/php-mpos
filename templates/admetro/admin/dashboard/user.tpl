@@ -1,10 +1,10 @@
-<div class="row">
+<div class="row" style="margin-top: 10px;">
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-user fa-fw"></i> Users
       </div>
-      <div class="panel-body no-padding">
+      <div class="card-body no-padding">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
@@ -30,11 +30,11 @@
   </div>
         
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-sign-in fa-fw"></i> Logins
       </div>
-      <div class="panel-body no-padding">
+      <div class="card-body no-padding">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>

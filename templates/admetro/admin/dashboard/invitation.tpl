@@ -1,9 +1,9 @@
   <div class="col-lg-6">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-users fa-fw"></i> <a href="{$smarty.server.SCRIPT_NAME}?page=admin&action=invitations">Invitations</a>
       </div>
-      <div class="panel-body no-padding">
+      <div class="card-body no-padding">
         <table class="table table-striped table-bordered table-hover">
           <thead>
             <tr>
