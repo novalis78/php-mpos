@@ -1,3 +1,4 @@
+<script src="site_assets/admetro/js/app.min.js"></script>
 <script>
   var zxcvbnPath = "{$PATH}/js/zxcvbn/zxcvbn.js";
 </script>
@@ -101,3 +102,5 @@
     </div>
   </div>
 </div>
+
+ 
