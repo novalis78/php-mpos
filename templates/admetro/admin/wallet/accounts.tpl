@@ -1,10 +1,10 @@
   <div class="row">
     <div class="col-lg-12">
-      <div class="panel panel-info">
-        <div class="panel-heading">
+      <div class="card panel-info">
+        <div class="card-header">
           <i class="fa fa-users fa-fw"></i> Wallet Accounts
         </div>
-        <div class="panel-body ">
+        <div class="card-body ">
           <div class="panel-group">
 {foreach key=NAME item=VALUE from=$ACCOUNTS}
             <div class="panel panel-default">
@@ -32,8 +32,8 @@
 {if $ACCOUNT == $NAME}
 
                 <div class="col-lg-8">
-                  <div class="panel panel-info">
-                    <div class="panel-heading">
+                  <div class="card panel-info">
+                    <div class="card-header">
                       <i class="fa fa-book fa-fw"></i> Addresses assigned to Account {$ACCOUNT|default:"Default"}
                     </div>
                     <div class="table-responsive panel-body no-padding">

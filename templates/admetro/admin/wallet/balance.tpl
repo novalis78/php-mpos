@@ -1,9 +1,9 @@
   <div class="col-lg-4">
-    <div class="panel panel-info">
-      <div class="panel-heading">
+    <div class="card panel-info">
+      <div class="card-header">
         <i class="fa fa-money fa-fw"></i> Balance Summary
       </div>
-      <div class="panel-body no-padding">
+      <div class="card-body no-padding">
         <table class="table table-striped table-bordered table-hover">
           <tr>
             <td>Wallet Balance</td>
