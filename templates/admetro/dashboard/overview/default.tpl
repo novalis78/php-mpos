@@ -61,7 +61,7 @@
             <div class="widget-stats-info">
               <div class="widget-stats-title">NETWORK HASHRATE</div>
               <div class="widget-stats-value">
-                {if $GLOBAL.nethashrate > 0}{$GLOBAL.nethashrate|number_format:"2"}{else}n/a{/if}
+               {$GLOBAL.nethashrate} || {if $GLOBAL.nethashrate > 0}{$GLOBAL.nethashrate|number_format:"2"}{else}n/a{/if}
               </div>
               <div class="widget-stats-desc">{$GLOBAL.hashunits.network}</div>
             </div>
