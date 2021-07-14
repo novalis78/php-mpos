@@ -239,7 +239,7 @@
               <div class="text-center p-t-15 p-b-30">
                 <div class="f-w-600">Right now</div>
                 <div class="f-s-80 line-height-1 m-xs">
-                  <span data-id="active-user">{if $GLOBAL.nethashrate > 0}{$GLOBAL.nethashrate|number_format:"2"}{else}n/a{/if}</span>
+                  <span data-id="active-user">{if $GLOBAL.nethashrate > 0}{round($GLOBAL.nethashrate/10, 2)|number_format:"2"}{else}n/a{/if}</span>
                 </div>
                 <div>{$GLOBAL.hashunits.network}</div>
               </div>
