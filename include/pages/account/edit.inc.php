@@ -198,6 +198,13 @@ if ($config['twofactor']['enabled'] && $user->isAuthenticated()) {
   $smarty->assign("DETAILSSENT", $ea_sent);
 }
 
+  $smarty->assign("CHANGEPASSUNLOCKED", 1);
+  $smarty->assign("WITHDRAWUNLOCKED", 1);
+  $smarty->assign("DETAILSUNLOCKED", 1);
+  $smarty->assign("CHANGEPASSSENT", 1);
+  $smarty->assign("WITHDRAWSENT", 1);
+  $smarty->assign("DETAILSSENT", 1);
+
 $email = $_SESSION['USERDATA']['email'];
 $default = "http://pool2.marscoin.org/site_assets/admetro/img/user-1.jpg";
 $size = 360;

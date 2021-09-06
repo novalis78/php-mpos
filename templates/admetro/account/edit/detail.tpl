@@ -3,6 +3,7 @@
   <input type="hidden" name="action" value="{$smarty.request.action|escape}">
   <input type="hidden" name="do" value="updateAccount">
   <input type="hidden" name="ctoken" value="{$CTOKEN|escape|default:""}" />
+
   <div class="col-lg-12">
     <div class="card panel-info">
       <div class="card-header">
